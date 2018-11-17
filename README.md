@@ -13,10 +13,10 @@ This is a fork of the project made by Mulham Raee.
 The library is hosted on JitPack, add this to your **build.gradle**:
 
 ```gradle
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 		}
 	}
     
