@@ -21,7 +21,7 @@ allprojects {
 	}
     
 dependencies {
-	implementation 'com.github.LithiumSR:Horizontal-Calendar:1.3.3'
+	implementation 'com.github.LithiumSR:Horizontal-Calendar:1.3.5'
 	}
 ```
 
