@@ -4,6 +4,8 @@ import android.text.format.DateFormat;
 import android.util.TypedValue;
 import android.view.View;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -47,18 +49,19 @@ public class DaysAdapter extends HorizontalCalendarBaseAdapter<DateViewHolder, C
             holder.selectionView.setBackgroundColor(selectorColor);
         }
 
-        holder.textMiddle.setText(DateFormat.format(config.getFormatMiddleText(), day));
+        holder.textMiddle.setText(StringUtils.capitalize(DateFormat.format(config.getFormatMiddleText(), day).toString()));
         holder.textMiddle.setTextSize(TypedValue.COMPLEX_UNIT_SP, config.getSizeMiddleText());
 
         if (config.isShowTopText()) {
-            holder.textTop.setText(DateFormat.format(config.getFormatTopText(), day));
+            holder.textTop.setText(StringUtils.capitalize(DateFormat.format(config.getFormatTopText(), day).toString()));
             holder.textTop.setTextSize(TypedValue.COMPLEX_UNIT_SP, config.getSizeTopText());
         } else {
             holder.textTop.setVisibility(View.GONE);
         }
 
         if (config.isShowBottomText()) {
-            holder.textBottom.setText(DateFormat.format(config.getFormatBottomText(), day));
+            holder.textBottom.setText(StringUtils.capitalize(DateFormat.format(config.getFormatBottomText(), day).toString()));
+
             holder.textBottom.setTextSize(TypedValue.COMPLEX_UNIT_SP, config.getSizeBottomText());
         } else {
             holder.textBottom.setVisibility(View.GONE);
